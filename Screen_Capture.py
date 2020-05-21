@@ -22,3 +22,5 @@ for i in range(0, 100):
     #time.sleep(0.1)
 
 time_end = time.perf_counter()
+
+print("The time taken to execute this is " + str(time_end - time_start) + "s")

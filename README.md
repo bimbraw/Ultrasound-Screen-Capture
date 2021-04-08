@@ -1,4 +1,4 @@
-# Ultrasound Screen
+# Ultrasound Screen Capture
 My code to capture portions of computer Screen for ultrasound image acquisition. Currently dimensions are set to my monitor.
 
 There are two files - 

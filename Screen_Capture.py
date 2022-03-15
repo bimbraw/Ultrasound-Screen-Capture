@@ -22,3 +22,4 @@ for i in range(0, 100):
     #time.sleep(0.1)
 
 time_end = time.perf_counter()
+print(time_end)

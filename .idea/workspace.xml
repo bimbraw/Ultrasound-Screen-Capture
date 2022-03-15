@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53512f8a-fc0a-4cd2-8537-c8a4234e258b" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/SVM_1_u.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scratch_2.py" afterDir="false" />
 =======
@@ -13,6 +14,9 @@
 >>>>>>> 0b90236aead7a98e4d7ba251553b6f2e75411411
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screen_Capture.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screen_Capture.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/6_states.png" beforeDir="false" afterPath="$PROJECT_DIR$/6_states.png" afterDir="false" />
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +48,7 @@
       <recent name="C:\PyCharm\Ultrasound_Screen" />
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -55,6 +59,7 @@
       <recent name="C:\PyCharm\Ultrasound_Screen" />
     </key>
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="RunManager" selected="Python.scratch">
     <configuration name="SVR_Body_Overlay" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -104,6 +109,10 @@
   <component name="RunManager" selected="Python.Ultrasound_classification">
     <configuration name="Screen_Capture (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 >>>>>>> 0b90236aead7a98e4d7ba251553b6f2e75411411
+=======
+  <component name="RunManager" selected="Python.multiple_webcams">
+    <configuration name="cov_pneu_reg_classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       <module name="Ultrasound_Screen" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,28 +124,11 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/SVR_Final.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Ultrasound_Screen" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cov_pneu_reg_classification.py" />
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,31 +138,10 @@
       <method v="2" />
     </configuration>
 <<<<<<< HEAD
-    <configuration name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 =======
-    <configuration name="Screen_Capture_classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Ultrasound_Screen" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Screen_Capture_classification.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Ultrasound_Video" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
->>>>>>> 0b90236aead7a98e4d7ba251553b6f2e75411411
+    <configuration name="cov_pneu_reg_classification_aug_final (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       <module name="Ultrasound_Screen" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,7 +153,11 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\PyCharm\Ultrasound_Screen\scratch_2.py" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cov_pneu_reg_classification_aug_final.py" />
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,7 +166,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Ultrasound_classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <configuration name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Screen_Capture_classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="cov_pneu_reg_classification_aug_final" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       <module name="Ultrasound_Screen" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,7 +185,58 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ultrasound_classification.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\bimbr\PycharmProjects\Ultrasound_Screen\cov_pneu_reg_classification_aug_final.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+<<<<<<< HEAD
+    <configuration name="Ultrasound_Video" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> 0b90236aead7a98e4d7ba251553b6f2e75411411
+=======
+    <configuration name="cov_pneu_reg_classification_fed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
+      <module name="Ultrasound_Screen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="C:\PyCharm\Ultrasound_Screen\scratch_2.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cov_pneu_reg_classification_fed.py" />
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="multiple_webcams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Ultrasound_Screen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multiple_webcams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,6 +247,7 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.SVR_Final" />
@@ -227,6 +261,13 @@
         <item itemvalue="Python.Ultrasound_Video" />
         <item itemvalue="Python.Screen_Capture" />
 >>>>>>> 0b90236aead7a98e4d7ba251553b6f2e75411411
+=======
+        <item itemvalue="Python.multiple_webcams" />
+        <item itemvalue="Python.cov_pneu_reg_classification_fed" />
+        <item itemvalue="Python.cov_pneu_reg_classification_aug_final (1)" />
+        <item itemvalue="Python.cov_pneu_reg_classification" />
+        <item itemvalue="Python.cov_pneu_reg_classification_aug_final" />
+>>>>>>> c962263752f10f26680c6d8bd9fd0a2f10422398
       </list>
     </recent_temporary>
   </component>

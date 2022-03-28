@@ -18,7 +18,7 @@ for i in range(0, 500):
     #top left corner to bottom right corner
     image = pyautogui.screenshot(region=(640, 0, 640, 800))
     image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-    cv2.imwrite("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Camren/image" + str(i) + ".png", image)
+    cv2.imwrite("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_config/Camren/image" + str(i) + ".png", image)
     if q < 100:
         print(p)
     else:

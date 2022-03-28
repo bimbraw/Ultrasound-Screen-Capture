@@ -17,7 +17,7 @@ time_start = time.perf_counter()
 image_tensor = []#np.zeros(100, 800, 640, 3)
 subject = 'Camren'
 
-for im_path in glob.glob("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/" + str(subject) + "/image*.png"):
+for im_path in glob.glob("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_config/" + str(subject) + "/image*.png"):
      im = imageio.imread(im_path)
      #plt.imshow(im, interpolation='nearest')
      #plt.show()
@@ -50,7 +50,7 @@ print('Started Training')
 svclassifier.fit(X_train, y_train)
 print('Training done!')
 
-filename = 'C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/' + str(subject) + '/finalized_model.sav'
+filename = 'C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_config/' + str(subject) + '/finalized_model.sav'
 joblib.dump(svclassifier, filename)
 print(f'Model saved as {filename}')
 
@@ -75,7 +75,7 @@ plt.savefig(str(subject) + '6_states.png')
 print(confusion_matrix(y_test,y_pred))
 print(classification_report(y_test,y_pred))
 print(svclassifier.classes_)
-np.save('C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/' + str(subject) + '/class_values', svclassifier.classes_)
+np.save('C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_config/' + str(subject) + '/class_values', svclassifier.classes_)
 
 time_end = time.perf_counter()
 

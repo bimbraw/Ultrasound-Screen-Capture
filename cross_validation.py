@@ -10,21 +10,20 @@ import time
 import sys
 
 #subject = 'Anthony'
-CV_folds = [2, 5, 10]
-
+CV_folds = [20]
 subjects = ["Anthony", "Camren", "Kai", "Keshav", "Kevin", "Layal"]
 
-for j in range(len(CV_folds)):
-     print("Now starting CV Folds = " + str(CV_folds[j]))
-     for i in range(len(subjects)):
-          print("Now starting subject: " + str(subjects[i]))
-          sys.stdout = open("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Results/" + str(subjects[i]) + "/CV/output_CV_" + str(CV_folds[j]) + "_folds.txt", 'w')
+for j_j in range(len(CV_folds)):
+     n_CV = CV_folds[j_j]
+     print("Now starting CV Folds = " + str(n_CV))
+     for i_i in range(len(subjects)):
+          sys.stdout = open("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Results/" + str(subjects[i_i]) + "/CV/output_CV_" + str(n_CV) + "_folds.txt", 'w')
 
           time_start = time.perf_counter()
 
           image_tensor = []#np.zeros(100, 800, 640, 3)
 
-          for im_path in glob.glob("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/" + str(subjects[i]) + "/image*.png"):
+          for im_path in glob.glob("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/" + str(subjects[i_i]) + "/image*.png"):
                im = imageio.imread(im_path)
                image_tensor.append(im)
 
@@ -45,12 +44,13 @@ for j in range(len(CV_folds)):
           svclassifier = SVC(kernel='linear')
           print('Started Generating the CV score with SVC')
 
-          accuracy = cross_val_score(svclassifier, image_flatten, label, scoring='accuracy', cv=CV_folds[j], verbose=1)
+          accuracy = cross_val_score(svclassifier, image_flatten, label, scoring='accuracy', cv=n_CV, verbose=1)
           print("The CV accuracy score is: " + str(accuracy))
-          print('Cross Validation Done for CV Folds = ' + str(CV_folds[j]) + ' for subject = ' + str(subjects[i]) + '!')
+          print('Cross Validation Done for CV Folds = ' + str(n_CV) + ' for subject = ' + str(subjects[i_i]) + '!')
 
           time_end = time.perf_counter()
           time_min = time_end/60
           print("Time in seconds: " + str(time_end) + ", and time in minutes: " + str(time_end))
 
           sys.stdout.close()
+          #print("Ended for subject: " + str(subjects[i_i]))

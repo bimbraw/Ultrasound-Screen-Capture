@@ -29,6 +29,19 @@ im_init = np.zeros((800, 640, 3))
 
 val_init_vals = [50, 150, 250, 350, 450]
 
+val_init = val_init_vals[1]
+samples = 15
+for i in range(0, samples):
+    val = val_init + i
+    str_name = "C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image" + str(val) + ".png"
+    im_agg = mpimg.imread(str_name)
+    im_agg = im_init + im_agg
+    im_init = im_agg
+
+im_agg_1 = im_agg
+
+im_init = np.zeros((800, 640, 3))
+
 val_init = val_init_vals[4]
 samples = 15
 for i in range(0, samples):
@@ -38,10 +51,14 @@ for i in range(0, samples):
     im_agg = im_init + im_agg
     im_init = im_agg
 
-print(im_agg.size)
+im_agg_2 = im_agg
+
+#print(im_agg.size)
+
+new = im_agg_2 - im_agg_1
 
 plt.figure(figsize=(5, 5))
-imgplot = plt.imshow(im_agg/samples)
+imgplot = plt.imshow(abs(new/samples)*2)
 
 plt.show()
 

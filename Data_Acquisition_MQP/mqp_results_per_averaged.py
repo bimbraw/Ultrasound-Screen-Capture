@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import addcopyfighandler
 
-# Data
-c1 = np.array([86, 85, 52, 86])#([95, 69, 94, 50, 74])
-c2 = np.array([50, 66, 92, 63])#([78, 85, 92, 66, 73])
-c3 = np.array([74, 73, 68, 62])#([64, 41, 50, 66, 73])
+# Data - 3 subjects - Layal removed
+c1 = np.array([86, 85, 86])#52, 86])#([95, 69, 94, 50, 74])
+c3 = np.array([50, 66, 63])#92, 63])#([78, 85, 92, 66, 73])
+c2 = np.array([74, 73, 62])#68, 62])#([64, 41, 50, 66, 73])
 
 # Calculate the average
 c1_mean = np.mean(c1)
@@ -25,7 +26,7 @@ print(c1_std,
       c3_std)
 
 # Define labels, positions, bar heights and error bar heights
-labels = ['P', 'P_U', 'P_D']
+labels = ['P', 'P_D', 'P_U']
 x_pos = np.arange(len(labels))
 CTEs = [c1_mean,
         c2_mean,

@@ -13,11 +13,16 @@ time_start = time.perf_counter()
 #This gives the monitors data - can be used to fix the region parameters
 print(get_monitors())
 
+<<<<<<< HEAD
+for i in range(0, 2000):
+=======
 for i in range(0, 50):
+>>>>>>> 7078c433a923eab84b2a6b6d76ab2f18e9ddf22e
     #top left corner to bottom right corner
     image = pyautogui.screenshot(region=(640, 0, 640, 800))
     image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     cv2.imwrite("image" + str(i) + ".png", image)
+    time.sleep(0.5)
     #Uncomment it to space out the screenshots wrt time
     #time.sleep(0.1)
 

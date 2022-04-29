@@ -42,8 +42,40 @@ print(label.shape)
 image_flatten = image_tensor.reshape((500, 800*640*3))
 print(image_flatten.shape)
 
-X_train, X_test, y_train, y_test = train_test_split(image_flatten, label, test_size=0.2)
-print('split data')
+X_train_1 = image_flatten[:80, :]
+X_train_2 = image_flatten[100:180, :]
+X_train_3 = image_flatten[200:280, :]
+X_train_4 = image_flatten[300:380, :]
+X_train_5 = image_flatten[400:480, :]
+X_test_1 = image_flatten[80:100, :]
+X_test_2 = image_flatten[180:200, :]
+X_test_3 = image_flatten[280:300, :]
+X_test_4 = image_flatten[380:400, :]
+X_test_5 = image_flatten[480:500, :]
+y_train_1 = label[:80]
+y_train_2 = label[100:180]
+y_train_3 = label[200:280]
+y_train_4 = label[300:380]
+y_train_5 = label[400:480]
+y_test_1 = label[80:100]
+y_test_2 = label[180:200]
+y_test_3 = label[280:300]
+y_test_4 = label[380:400]
+y_test_5 = label[480:500]
+
+print(X_train_3.shape)
+print(X_test_3.shape)
+print(y_train_3.shape)
+print(y_test_3.shape)
+
+X_train = np.concatenate((X_train_1, X_train_2, X_train_3, X_train_4, X_train_5))
+X_test = np.concatenate((X_test_1, X_test_2, X_test_3, X_test_4, X_test_5))
+y_train = np.concatenate((y_train_1, y_train_2, y_train_3, y_train_4, y_train_5))
+y_test = np.concatenate((y_test_1, y_test_2, y_test_3, y_test_4, y_test_5))
+print(X_train.shape)
+print(y_train.shape)
+print(X_test.shape)
+print(y_test.shape)
 
 svclassifier = SVC(kernel='linear', verbose=1)
 print('Started Training')

@@ -12,23 +12,67 @@ from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from matplotlib.pyplot import figure
+import addcopyfighandler
 
 time_start = time.perf_counter()
-image_tensor = []#np.zeros(100, 800, 640, 3)
-subject = 'Anthony'
 
-for im_path in glob.glob("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_config/" + str(subject) + "/image*.png"):
-     im = imageio.imread(im_path)
-     #plt.imshow(im, interpolation='nearest')
-     #plt.show()
-     image_tensor.append(im)
+im1 = mpimg.imread("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image60.png")
+im2 = mpimg.imread("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image160.png")
+im3 = mpimg.imread("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image260.png")
+im4 = mpimg.imread("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image360.png")
+im5 = mpimg.imread("C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image460.png")
 
-image_tensor = np.asarray(image_tensor)
+im_init = np.zeros((800, 640, 3))
 
-print(im.shape)
-print(type(image_tensor))
-print(image_tensor.shape)
+val_init_vals = [50, 150, 250, 350, 450]
 
+val_init = val_init_vals[1]
+samples = 15
+for i in range(0, samples):
+    val = val_init + i
+    str_name = "C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image" + str(val) + ".png"
+    im_agg = mpimg.imread(str_name)
+    im_agg = im_init + im_agg
+    im_init = im_agg
+
+im_agg_1 = im_agg
+
+im_init = np.zeros((800, 640, 3))
+
+val_init = val_init_vals[4]
+samples = 15
+for i in range(0, samples):
+    val = val_init + i
+    str_name = "C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification/Keshav/image" + str(val) + ".png"
+    im_agg = mpimg.imread(str_name)
+    im_agg = im_init + im_agg
+    im_init = im_agg
+
+im_agg_2 = im_agg
+
+#print(im_agg.size)
+
+new = im_agg_2 - im_agg_1
+
+plt.figure(figsize=(5, 5))
+imgplot = plt.imshow(abs(new/samples)*2)
+
+plt.show()
+
+'''
+im_new = im5 - im5
+
+plt.figure(figsize=(5, 5))
+imgplot = plt.imshow(im_new * 2)
+plt.show()
+'''
+#fig = plt.figure(figsize=(12, 10))
+#plt.show()
+
+'''
 label = []
 
 for i in range(0, 5):
@@ -80,3 +124,4 @@ np.save('C:/Users/bimbr/OneDrive/Desktop/SMG/data_MQP_classification_parallel_co
 time_end = time.perf_counter()
 
 print(time_end)
+'''

@@ -13,11 +13,11 @@ from scipy import ndimage
 # [My Notes](https://docs.google.com/document/d/1yIDTEsXFkLLV5sLmPHtV8-X3GZ2Oa-X2zYvS1BaXMpw/edit?usp=sharing)
 
 # image_url='http://i.imgur.com/8vuLtqi.png'
-image_url = 'C:/Users/kbimbraw/Documents/MQP_data/Anthony/image_1_450.png'
+image_url = 'P:/MQP_data/ML_project_data/Perpendicular_1/S_1_1/image_1_450.png'
 
 
 # reads the image from url using PIL and converting it into a numpy array after converted grayscale image.
-def get_image_from_url(image_url='C:/Users/kbimbraw/Documents/MQP_data/Anthony/image_1_450.png', size=(64, 64)):
+def get_image_from_url(image_url='P:/MQP_data/ML_project_data/Perpendicular_1/S_1_1/image_1_450.png', size=(64, 64)):
     image = imread(image_url)
     #image_file = io.BytesIO(file_descriptor.read())
     #image = Image.open(image_file)
@@ -66,7 +66,13 @@ for ii in range(dct_size):
     reconstructed_images.append(reconstructed_image)
 
 plt.figure(figsize=(16, 12))
-plt.scatter(range(dct.ravel().size), np.log10(np.abs(dct.ravel())), c='#348ABD', alpha=.3)
+scatter_x = range(dct.ravel().size)
+scatter_y = np.log10(np.abs(dct.ravel()))
+print(scatter_x)
+print(scatter_y.shape)
+print(scatter_y)
+plt.scatter(scatter_x, scatter_y, c='#348ABD', alpha=.3)
+
 '''
  The point is instead of comparing to only Root Mean Squared Error(RMMS) to learn where to stop in the coefficients,
  one could check better metrics which consider visual fidelity or even perceived quality to find 
@@ -97,8 +103,11 @@ but also provides a good compromise between compression and image quality.
 orders and similar to very high frequencies.} ???!!
 * less coefficients means you get to convey a ok approximation of the image with far less space.
 '''
-plt.matshow(np.abs(dct[:50, :50]), cmap=plt.cm.Paired)
-plt.title('First 2500 coefficients in Grid')
+print(np.abs(dct[:10, :10]))
+plt.matshow(np.abs(dct[:10, :10]), cmap=plt.cm.Paired)
+#plt.xlim(-0.5, 10.5)
+#plt.ylim(-0.5, 10.5)
+plt.title('DCT output (10x10) for Class 1')
 '''
 see This explains what this guy says here https://youtu.be/_bltj_7Ne2c?t=869
 see the coefficients in the code is the values in the Transform matrix (after we operate dct on the image)

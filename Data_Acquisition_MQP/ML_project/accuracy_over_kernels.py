@@ -3,41 +3,47 @@ import matplotlib.pyplot as plt
 import addcopyfighandler
 
 # Data - 3 subjects - Layal removed
-c1 = np.array([86, 85, 52, 86])#([95, 69, 94, 50, 74])
-c3 = np.array([50, 66, 92, 63])#([78, 85, 92, 66, 73])
-c2 = np.array([74, 73, 68, 62])#([64, 41, 50, 66, 73])
-
+c1 = np.array([70, 32, 36])#52, 86])#([95, 69, 94, 50, 74])
+c2 = np.array([90, 22, 44])#92, 63])#([78, 85, 92, 66, 73])
+c3 = np.array([51, 19, 37])#68, 62])#([64, 41, 50, 66, 73])
+c4 = np.array([89, 20, 54])
 # Calculate the average
 c1_mean = np.mean(c1)
 c2_mean = np.mean(c2)
 c3_mean = np.mean(c3)
+c4_mean = np.mean(c4)
 
 # Calculate the standard deviation
 c1_std = np.std(c1)
 c2_std = np.std(c2)
 c3_std = np.std(c3)
+c4_std = np.std(c4)
 
 print(c1_mean,
       c2_mean,
-      c3_mean)
+      c3_mean,
+      c4_mean)
 
 print(c1_std,
       c2_std,
-      c3_std)
+      c3_std,
+      c4_std)
 
 # Define labels, positions, bar heights and error bar heights
-labels = ['P', 'P_D', 'P_U']
+labels = ['Linear', 'Polynomial', 'Sigmoid', 'RBF']
 x_pos = np.arange(len(labels))
 CTEs = [c1_mean,
         c2_mean,
-        c3_mean]
+        c3_mean,
+        c4_mean]
 error =[c1_std,
         c2_std,
-        c3_std]
+        c3_std,
+        c4_std]
 
-font = {'size'   : 14}
+#font = {'size'   : 14}
 
-plt.rc('font', **font)
+#plt.rc('font', **font)
 
 # Build the plot
 fig, ax = plt.subplots()
@@ -46,13 +52,13 @@ ax.bar(x_pos, CTEs,
        align='center',
        alpha=0.5,
        ecolor='black',
-       capsize=10)
+       capsize=5)
 ax.set_ylabel('Accuracy Values')
-ax.set_xlabel('Probe Configurations')
+ax.set_xlabel('SVC Kernel')
 ax.set_xticks(x_pos)
 ax.set_xticklabels(labels)
 ax.set_ylim([0, 100])
-ax.set_title('Accuracy Plot (Perpendicular Averaged)')
+ax.set_title('Accuracy Plot for different SVC kernels')
 ax.yaxis.grid(True)
 
 # Save the figure and show

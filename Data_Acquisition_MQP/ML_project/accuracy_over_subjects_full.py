@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import addcopyfighandler
 
 # Data - 3 subjects - Layal removed
-c1 = np.array([86, 85, 52, 86])#([95, 69, 94, 50, 74])
-c3 = np.array([50, 66, 92, 63])#([78, 85, 92, 66, 73])
-c2 = np.array([74, 73, 68, 62])#([64, 41, 50, 66, 73])
+c1 = np.array([82, 79, 20, 89])#52, 86])#([95, 69, 94, 50, 74])
+c2 = np.array([51, 58, 14, 63])#92, 63])#([78, 85, 92, 66, 73])
+c3 = np.array([57, 66, 52, 92])#68, 62])#([64, 41, 50, 66, 73])
 
 # Calculate the average
 c1_mean = np.mean(c1)
@@ -26,18 +26,19 @@ print(c1_std,
       c3_std)
 
 # Define labels, positions, bar heights and error bar heights
-labels = ['P', 'P_D', 'P_U']
+labels = ['Subject 1', 'Subject 2', 'Subject 3']
 x_pos = np.arange(len(labels))
 CTEs = [c1_mean,
         c2_mean,
         c3_mean]
+
 error =[c1_std,
         c2_std,
         c3_std]
 
-font = {'size'   : 14}
+#font = {'size'   : 14}
 
-plt.rc('font', **font)
+#plt.rc('font', **font)
 
 # Build the plot
 fig, ax = plt.subplots()
@@ -46,13 +47,13 @@ ax.bar(x_pos, CTEs,
        align='center',
        alpha=0.5,
        ecolor='black',
-       capsize=10)
+       capsize=5)
 ax.set_ylabel('Accuracy Values')
-ax.set_xlabel('Probe Configurations')
+ax.set_xlabel('Subject IDs')
 ax.set_xticks(x_pos)
 ax.set_xticklabels(labels)
 ax.set_ylim([0, 100])
-ax.set_title('Accuracy Plot (Perpendicular Averaged)')
+ax.set_title('Accuracy Plot for subjects (averaged over kernels)')
 ax.yaxis.grid(True)
 
 # Save the figure and show

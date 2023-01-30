@@ -15,18 +15,16 @@ from matplotlib import pyplot as plt
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, confusion_matrix
 
-#linear, poly, sigmoid, rbf
-
 subject = '3'
 kernel_val = 'sigmoid'
 
 #C:\Users\Keshav Bimbraw\OneDrive\Documents\ML_project\data\subject_1
-X = np.load("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/subject_" + str(subject) + "/X_" + str(subject) + ".npy")
+X = np.load("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/subject_" + str(subject) + "/X_" + str(subject) + "_dct.npy")
 print(X.shape)
 y = np.load("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/subject_" + str(subject) + "/y_" + str(subject) + ".npy")
 print(y.shape)
 
-X = X.reshape((9000, 14000))
+X = X.reshape((9000, 100))
 print(X.shape)
 
 #1/3 test-train split
@@ -60,10 +58,10 @@ plt.title('Confusion matrix for SVC, 5 classes')
 fig.colorbar(cax)
 plt.xlabel('Predicted')
 plt.ylabel('True')
-plt.savefig("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/results/svc_" + str(kernel_val) + "_kernel/5_states_subject_" + str(subject) + "_" + str(kernel_val) + "_full.png")
+plt.savefig("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/results/svc_" + str(kernel_val) + "_kernel/5_states_subject_" + str(subject) + "_" + str(kernel_val) + ".png")
 plt.show()
 
-with open("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/results/svc_" + str(kernel_val) + "_kernel/5_states_subject_" + str(subject) + "_" + str(kernel_val) + "_full.txt", "a") as external_file:
+with open("C:/Users/Keshav Bimbraw/OneDrive/Documents/ML_project/data/results/svc_" + str(kernel_val) + "_kernel/5_states_subject_" + str(subject) + "_" + str(kernel_val) + ".txt", "a") as external_file:
     print(confusion_matrix(y_test,y_pred), file=external_file)
     print(classification_report(y_test,y_pred), file=external_file)
 

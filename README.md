@@ -1,7 +1,7 @@
 # Ultrasound Screen Capture
-My code to capture portions of computer Screen for ultrasound image acquisition. 
+My code for capturing portions of a computer screen for ultrasound image acquisition. 
 
-There are the two python files - 
+These are the two Python files - 
 1. Screen_Capture.py - Initial implementation for simple screen grabbing for one frame.
 2. Ultrasound_Video.py - Final implementation for screen grabbing for multiple frames and saving them.
 
